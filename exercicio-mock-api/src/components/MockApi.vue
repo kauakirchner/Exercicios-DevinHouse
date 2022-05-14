@@ -1,37 +1,39 @@
 <template>
   <div class="container">
+      <router-view></router-view>
       <h1>Consulta em api por id</h1>
-      <input type="number" v-model="id">
-      <div class="btn">
-          <button @click="consultaApi">Consultar</button>
+      <div>
+          <form @submit.prevent="save">
+              <input type="text" placeholder="Nome" v-model="user.nome" class="form-control">
+              <input type="text" placeholder="Idade" v-model="user.idade" class="form-control">
+                <input type="text" placeholder="email" v-model="user.email" class="form-control">
+              <button type="submit">Salvar</button>
+          </form>
       </div>
-      {{user}}
   </div>
 </template>
 
 <script>
 
-import axios from 'axios'
 export default {
-    name: 'MockApiA',
 
     data(){
         return{
-            id: null,
             user:{} 
         }
     },
     methods:{
-        async consultaApi(){
-            const promisse = axios.get(`https://627e989bb75a25d3f3baf486.mockapi.io/api/v1/users/${this.id}`)
-            await promisse.then((response) =>{
-            this.user = response.data
-            console.log(response.data)
-            }).catch((err) =>{
-                console.log(err)
-                alert('Mano deu erro')
-            })
-        },
+         save(){
+           this.$store.dispatch('module1/save', this.user)
+           .then(() =>{
+               this.$router.push('/retorna')
+           })
+           console.log('Finalizou o metodo')
+       },
+
+        vaiParaHome(){
+            this.$router.push('/home')
+        }
     }
 }
 
