@@ -3,7 +3,7 @@ import HomeA from './../components/Views/HomeA.vue'
 import CadastroPessoas from './../components/Views/CadastroPessoas.vue'
 import ListagemPessoas from './../components/Views/ListagemPessoas.vue'
 
-const routes =[
+const routes = [
     {path: '/', component: HomeA},
     {path: '/cadastro', component: CadastroPessoas},
     {path:'/listagem', component: ListagemPessoas}
