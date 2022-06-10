@@ -17,10 +17,6 @@ print('Realize um calculo com uma das 4 operações!!')
 while True:
     
     operacao = input('qual operação deseja fazer? soma, subtração, multiplicação ou divisão? ')
-    if operacao == 'sair':
-        print('Fim do programa')
-        break
-
 
     primeiroNumero = int(input('Digite um número: '))
     segundoNumero = int(input('Digite outro número: '))
