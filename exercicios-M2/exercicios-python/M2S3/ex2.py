@@ -18,6 +18,7 @@ print('O tamanho de y é: ', len(y))
 
 z = x + y
 print('A concatenção de x e y é: ', z)
+print('x três vezes: ',x * 3)
 
 print('x está contido em z? ', x in z)
 
