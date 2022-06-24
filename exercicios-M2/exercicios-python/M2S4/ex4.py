@@ -11,7 +11,7 @@ class Conta_bancaria:
     
     def deposito(self):
         valor_deposito = int(input('Quanto deseja depositar? '))
-        novo_saldo = self.saldo - valor_deposito
+        novo_saldo = self.saldo + valor_deposito
         print(f'Depósito de {valor_deposito} feito! Seu saldo agora é de: {novo_saldo}')
 
 conta = Conta_bancaria('Kauã', 1212, 10000000000, 99999999999999999999)

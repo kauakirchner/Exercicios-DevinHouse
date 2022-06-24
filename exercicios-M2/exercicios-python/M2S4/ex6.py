@@ -35,12 +35,9 @@ class Conta_bancaria:
 
         
 
-        
-
-    
-        
-
 
 c1 = Conta_bancaria('Kauã', 1212, 3000, 919191919)
 c2 = Conta_bancaria('José', 1313, 1000, 919191919)
 c1.transferencia(2000, c2, c1)
+
+
