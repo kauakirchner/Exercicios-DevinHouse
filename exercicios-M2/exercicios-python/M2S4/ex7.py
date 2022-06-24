@@ -64,6 +64,9 @@ class Conta_bancaria:
             print(f'O valor solicitado é maior que o seu saldo atual. Seu saldo {conta_1.saldo}.')
             return False
 
+    def sair(self):
+        print(f'Fim do programa, até mais {self.nome_titular}')
+
         
 
 
@@ -79,3 +82,6 @@ if qual_operacao == '2':
 
 if  qual_operacao == '3':
     c1.transferencia(c1, c2)
+
+if qual_operacao == '4':
+    c1.sair()
